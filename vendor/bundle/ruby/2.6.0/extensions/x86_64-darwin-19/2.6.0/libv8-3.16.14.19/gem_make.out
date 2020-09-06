@@ -1,0 +1,13 @@
+current directory: /Users/ideshouhei/Desktop/yourbookshelf/vendor/bundle/ruby/2.6.0/gems/libv8-3.16.14.19/ext/libv8
+/Users/ideshouhei/.rbenv/versions/2.6.5/bin/ruby -I /Users/ideshouhei/.rbenv/versions/2.6.5/lib/ruby/2.6.0 -r ./siteconf20200906-39044-1dams6h.rb extconf.rb --with-system-v8
+creating Makefile
+
+current directory: /Users/ideshouhei/Desktop/yourbookshelf/vendor/bundle/ruby/2.6.0/gems/libv8-3.16.14.19/ext/libv8
+make "DESTDIR=" clean
+
+current directory: /Users/ideshouhei/Desktop/yourbookshelf/vendor/bundle/ruby/2.6.0/gems/libv8-3.16.14.19/ext/libv8
+make "DESTDIR="
+make: Nothing to be done for `all'.
+
+current directory: /Users/ideshouhei/Desktop/yourbookshelf/vendor/bundle/ruby/2.6.0/gems/libv8-3.16.14.19/ext/libv8
+make "DESTDIR=" install
