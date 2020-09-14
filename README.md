@@ -5,6 +5,8 @@ application up and running.
 
 Things you may want to cover:
 
+
+#これは転職用ポートフォリオです
 * Ruby version
 
 * System dependencies
