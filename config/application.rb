@@ -14,6 +14,7 @@ module Yourbookshelf
     config.generators do |g|
       g.assets false          # CSS, JavaScriptファイル生成せず
       g.skip_routes false     # trueならroutes.rb変更せず、falseなら通常通り変更
+      g.test_framework false  #testファイル生成せず
     end
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration can go into files in config/initializers
