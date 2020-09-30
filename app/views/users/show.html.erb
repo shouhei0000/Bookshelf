@@ -1,2 +1,24 @@
-<h1>Users#show</h1>
-<p>Find me in app/views/users/show.html.erb</p>
+<div class="uk-card uk-card-default uk-width-1-2@m">
+    <div class="uk-card-header">
+        <div class="uk-grid-small uk-flex-middle" uk-grid>
+            <div class="uk-width-auto">
+                <img class="uk-border-circle" width="40" height="40" src="user.image.url">
+            </div>
+            <div class="uk-width-expand">
+                <h3 class="uk-card-title uk-margin-remove-bottom"><%= @user.name %></h3>
+                    <ul class="nav nav-tabs nav-justified mb-3">
+                       <li class="nav-item"><a href="#" class="nav-link">Microposts</a></li>
+                       <li class="nav-item"><a href="#" class="nav-link">Followings</a></li>
+                       <li class="nav-item"><a href="#" class="nav-link">Followers</a></li>
+                    </ul>
+                <p class="uk-text-meta uk-margin-remove-top"></p>
+            </div>
+        </div>
+    </div>
+    <div class="uk-card-body">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
+    </div>
+    <div class="uk-card-footer">
+        <a href="#" class="uk-button uk-button-text">Read more</a>
+    </div>
+</div>
