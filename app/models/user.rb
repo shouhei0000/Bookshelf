@@ -15,4 +15,6 @@ class User < ApplicationRecord
 
     has_many :reads    #書籍登録の読んだ本用
 
+    has_many :readings  #書籍登録の読んでいる本用
+
 end

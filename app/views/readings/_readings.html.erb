@@ -1,0 +1,19 @@
+  <% readings.each do |reading| %>
+    <div class="uk-child-width-1-2@m" uk-grid>
+         <div>
+             <div class="uk-card uk-card-default">
+                 <div class="uk-card-media-top">
+                     <%= image_tag reading.image.url %>
+                 </div>
+                 <div class="uk-card-body">
+                      <h3 class="uk-card-title"><%= reading.title %></h3>
+                      <p><%= reading.details %></p>
+                 </div>
+                 <div clss="uk-card-footer">
+                      <a class="uk-button uk-button-default"><%= link_to '詳細画面へ',reading_path(reading.id) %></a>
+                      
+                 </div>
+             </div>
+         </div>
+     </div>    
+  <% end %>  
