@@ -2,16 +2,27 @@
     <div class="uk-card-header">
         <div class="uk-grid-small uk-flex-middle" uk-grid>
             <div class="uk-width-auto">
-                <img class="uk-border-circle" width="40" height="40" src="user.image.url">
+            <% if @user.image? %>
+              <%= image_tag @user.image.url, size: 200 %> 
+            <% else %>
+                 <img class="mr-2 rounded" src="<%= gravatar_url(@user, { size: 50 }) %>" alt="">
+            <% end %>    
             </div>
             <div class="uk-width-expand">
                 <h3 class="uk-card-title uk-margin-remove-bottom"><%= @user.name %></h3>
                     <ul class="nav nav-tabs nav-justified mb-3">
-                       <li class="nav-item"><a href="#" class="nav-link">Microposts</a></li>
-                       <li class="nav-item"><a href="#" class="nav-link">Followings</a></li>
-                       <li class="nav-item"><a href="#" class="nav-link">Followers</a></li>
+                       <li><%= link_to '読んだ本', reads_path %></li>
+                       <li class="nav-item"><a href="#" class="nav-link">読んでいる本</a></li>
+                       <li class="nav-item"><a href="#" class="nav-link">読みたい本</a></li>
+                       <li class="nav-item"><a href="#" class="nav-link">フォロー</a></li>
+                       <li class="nav-item"><a href="#" class="nav-link">フォロワー</a></li>
                     </ul>
                 <p class="uk-text-meta uk-margin-remove-top"></p>
+            </div>
+            <div class="uk-width-expand">
+               <p uk-margin>
+                 <a class="uk-button uk-button-default"><%= link_to '書籍登録', new_read_path %></a>
+               </p>
             </div>
         </div>
     </div>
@@ -21,4 +32,6 @@
     <div class="uk-card-footer">
         <a href="#" class="uk-button uk-button-text">ここは機能として追加の予定はないのでのちのち削除予定</a>
     </div>
+
 </div>
+

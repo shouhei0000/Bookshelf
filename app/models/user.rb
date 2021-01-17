@@ -11,6 +11,8 @@ class User < ApplicationRecord
 
 
 
-    #mount_uploader :image, ImageUploader #画像アップロード機能の搭載                  
+    mount_uploader :image, ImageUploader #画像アップロード機能の搭載                  
+
+    has_many :reads    #書籍登録の読んだ本用
 
 end
