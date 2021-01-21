@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_01_17_101255) do
+ActiveRecord::Schema.define(version: 2021_01_17_151345) do
 
   create_table "readings", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "title"
@@ -41,6 +41,20 @@ ActiveRecord::Schema.define(version: 2021_01_17_101255) do
     t.string "image"
   end
 
+  create_table "will_", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+  end
+
+  create_table "willreads", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "title"
+    t.string "image"
+    t.text "details"
+    t.bigint "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_willreads_on_user_id"
+  end
+
   add_foreign_key "readings", "users"
   add_foreign_key "reads", "users"
+  add_foreign_key "willreads", "users"
 end

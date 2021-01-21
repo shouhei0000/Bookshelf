@@ -13,7 +13,7 @@
                     <ul class="nav nav-tabs nav-justified mb-3">
                        <li><%= link_to '読んだ本', reads_path %></li>
                        <li><%= link_to '読んでいる本', readings_path %></li>
-                       <li class="nav-item"><a href="#" class="nav-link">読みたい本</a></li>
+                       <li><%= link_to '読みたい本', willreads_path %></li>
                        <li class="nav-item"><a href="#" class="nav-link">フォロー</a></li>
                        <li class="nav-item"><a href="#" class="nav-link">フォロワー</a></li>
                     </ul>
@@ -27,7 +27,7 @@
                      <ul class="uk-nav uk-dropdown-nav">
                        <li><%= link_to '読んだ本の登録', new_read_path %></li>
                        <li><%= link_to '読んでいる本の登録', new_reading_path %></li>
-                       <li><%= link_to '読みたい本の登録', "#" %></li>
+                       <li><%= link_to '読みたい本の登録', new_willread_path %></li>
                      </ul>
                   </div>
                 </div>
