@@ -10,6 +10,7 @@
                     <ul class="uk-nav uk-navbar-dropdown-nav">
                        <% if logged_in? %>
                         <li><%= link_to 'プロフィール', user_path(current_user) %></li>
+                        <li><%= link_to 'ユーザー一覧', users_path %></li>
                         <li><%= link_to 'Logout', logout_path, method: :delete %></li>
                        <% else %> 
                         <li><%= link_to 'Sign up', sigunup_path, class: 'nav_link' %></li>

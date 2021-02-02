@@ -14,8 +14,8 @@
                        <li><%= link_to '読んだ本', reads_path %></li>
                        <li><%= link_to '読んでいる本', readings_path %></li>
                        <li><%= link_to '読みたい本', willreads_path %></li>
-                       <li class="nav-item"><a href="#" class="nav-link">フォロー</a></li>
-                       <li class="nav-item"><a href="#" class="nav-link">フォロワー</a></li>
+                       <li><%= link_to 'フォーロー', followings_user_path %></li>
+                       <li><%= link_to 'フォロワー', followers_user_path %></li>
                     </ul>
                 <p class="uk-text-meta uk-margin-remove-top"></p>
             </div>
@@ -31,16 +31,20 @@
                      </ul>
                   </div>
                 </div>
-                 
                </p>
             </div>
         </div>
     </div>
     <div class="uk-card-body">
+    <ul class="uk-list">
+      <li><%= @count_followings %></li>
+      <li><%= @count_followers %></li>
+    </ul>
+
         <p>ここにユーザの自己紹介文などがあればいいのかもしれない。入れるのを検討してみよう</p>
     </div>
     <div class="uk-card-footer">
-        <a href="#" class="uk-button uk-button-text">ここは機能として追加の予定はないのでのちのち削除予定</a>
+       <%= render 'relationships/follow_button', user: @user %>
     </div>
 
 </div>
