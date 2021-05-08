@@ -8,9 +8,10 @@
                  <div class="uk-card-body">
                       <h3 class="uk-card-title"><%= read.title %></h3>
                       <p><%= read.details %></p>
+
                  </div>
                  <div class="uk-card-footer">
-                      <a class="uk-button uk-button-default"><%= link_to '詳細画面へ',read_path(read.id) %></a>
+                      <a class="uk-button uk-button-default"><%= link_to '詳細画面へ',read_path(read.id, tag.id) %></a>
                       
                  </div>
              </div>

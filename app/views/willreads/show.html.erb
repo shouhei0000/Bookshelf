@@ -7,6 +7,12 @@
        <div class="uk-card-body">
          <h3 class="uk-card-title"><%= @willread.title %></h3>
          <p><%= @willread.details %></p>
+         <% @willread_tags.each do |tag| %>
+           <%= tag.name %>
+         <% end %>
+       </div>
+       <div class="uk-card-footer">
+         <a class="uk-button uk-button-default"><%= link_to '読みたい本の編集', edit_willread_path %>
        </div>
     </div>
   </div>

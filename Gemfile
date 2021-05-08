@@ -40,6 +40,8 @@ gem 'kaminari'
 
 gem 'carrierwave'
 
+gem 'nokogiri', '~> 1.10.10'
+
 
 
 
